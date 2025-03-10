@@ -642,7 +642,7 @@ where
 
 #[cfg(feature = "macros")]
 #[cfg_attr(doc_cfg, doc(cfg(feature = "macros")))]
-impl<K: ToSchema> ToSchema for std::collections::HashSet<K>
+impl<K: ToSchema, S> ToSchema for std::collections::HashSet<K, S>
 where
     std::collections::HashSet<K>: PartialSchema,
 {
